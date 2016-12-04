@@ -1,0 +1,14 @@
+﻿
+
+<table border="1">
+  <tr><th>タスク名</th><th>優先度</th><th>&nbsp;</th></tr>
+  <tr ng-repeat="task in tasks">
+       
+        <td>{{task.name}}</td>
+        <td>{{task.p}}</td>
+         <td>
+          <button ng-click="delete(task._id)">削除</button>
+        </td>
+  </tr>
+</table>
+<a ng-href="#/tasks/new">新規</a>
