@@ -1,0 +1,9 @@
+﻿タスク名 <input ng-model="task.name"><br>
+<!-- 優先度 <input ng-model="task.age"><br> --> 
+<p>
+<label><input ng-model="task.p"  type="radio" name="warn" value="なるべく早く">なるべく早く</label>
+<label><input ng-model="task.p" type="radio" name="danger" value="大至急">大至急</label>
+<label><input ng-model="task.p" type="radio" name="danger" value="通常">通常</label>
+</p>
+<button ng-click="edit()">登録</button>
+<a ng-href="/#/users">戻る</a>
