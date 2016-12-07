@@ -5,6 +5,7 @@ var mongodb = require('mongodb');
 var app = express();
 var tasks;
 
+
 app.use(express.static('front'));
 app.use(bodyParser.json());
 app.listen(3000);
@@ -14,15 +15,15 @@ mongodb.MongoClient.connect("mongodb://localhost:27017/test", function(err, data
 });
 
 
-app.get(   "/api/tasks", function(req, res) {
+app.get("/api/tasks", function(req, res) {
   tasks.find().toArray (function(err, items) {
    res.send(items);
   });
 }  );
 
 
-app.get("/api/task/:_id", function(req, res) {
-  users.findOne({_id: mongodb.ObjectID(req.params._id)}, function(err, item) {
+app.get("/api/tasks/:_id", function(req, res) {
+  tasks.findOne({_id: mongodb.ObjectID(req.params._id)}, function(err, item) {
    res.send(item);
   });
 });

@@ -1,9 +1,13 @@
+<head>
+﻿  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+﻿</head>
 ﻿タスク名 <input ng-model="task.name"><br>
-<!-- 優先度 <input ng-model="task.age"><br> --> 
+<!-- 優先度 <input ng-model="task.age"><br> -->
 <p>
-<label><input ng-model="task.p"  type="radio" name="warn" value="なるべく早く">なるべく早く</label>
-<label><input ng-model="task.p" type="radio" name="danger" value="大至急">大至急</label>
-<label><input ng-model="task.p" type="radio" name="danger" value="通常">通常</label>
+<label class="radio-inline"><input ng-model="task.p"  type="radio" name="warn" value="なるべく早く">なるべく早く</label>
+<label class="radio-inline"><input ng-model="task.p" type="radio" name="danger" value="大至急">大至急</label>
+<label class="radio-inline"><input ng-model="task.p" type="radio" name="normal" value="通常">通常</label>
+<label class="radio-inline"><input ng-model="task.p" type="radio" name="finished" value="終了">終了</label>
 </p>
-<button ng-click="edit()">登録</button>
+<button ng-click="edit()" class="btn btn-default acvtive">登録</button>
 <a ng-href="/#/users">戻る</a>

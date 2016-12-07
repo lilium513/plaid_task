@@ -1,14 +1,24 @@
-﻿
+﻿<head>
+﻿  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+﻿</head>
 
-<table border="1">
-  <tr><th>タスク名</th><th>優先度</th><th>&nbsp;</th></tr>
+<table border="1" class="table table-bordered table-hover">
+
+  <tr><th>タスク名</th><th>優先度</th></tr>
+
   <tr ng-repeat="task in tasks">
-       
+
         <td>{{task.name}}</td>
         <td>{{task.p}}</td>
          <td>
-          <button ng-click="delete(task._id)">削除</button>
+          <button ng-click="delete(task._id)" class="btn btn-danger">削除</button>
         </td>
+        <td>
+            <a ng-href="#/tasks/{{task._id}}">状態の編集</a>
+          </td>
+
   </tr>
 </table>
-<a ng-href="#/tasks/new">新規</a>
+
+<!-- <button type="button" class="btn btn-default acvtive"><a ng-href="#/tasks/new">新規</a></button> -->
+ <button type="button" class="btn btn-default acvtive" onclick="location.href='#/tasks/new'">新規</button>
